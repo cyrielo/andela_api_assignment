@@ -2,7 +2,7 @@ var worldBankApiModule = function(){
 	return {
 		init : function(){
 			
-			var all_countries_api = 'http://api.worldbank.org/countries/?format=json';
+			var all_countries_api = 'http://api.worldbank.org/countries/?format=json&&per_page=2000';
 			$.get(all_countries_api).success(function( response ){
 				console.log(response[1]);
 				var countrySelect = $('#countrySelect');
@@ -42,7 +42,7 @@ var worldBankApiModule = function(){
 					$('#region').html( country_data[i].region.value );
 
 					image_map = 
-					'http://maps.googleapis.com/maps/api/staticmap?center='+country_data[i].longitude+','+country_data[i].latitude+'&zoom=5&size=1200x600&sensor=true';
+					'http://maps.googleapis.com/maps/api/staticmap?center='+country_data[i].longitude+','+country_data[i].latitude+'&zoom=3&size=1200x600&sensor=false&markers=size:mid%7Ccolor:0xff0000';
 					console.log( image_map );
 					$('#imageContainer').html("<img src='"+image_map+"'>");
 
