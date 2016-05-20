@@ -42,10 +42,10 @@ var worldBankApiModule = function(){
 					$('#region').html( country_data[i].region.value );
 
 					image_map = 
-					'http://maps.googleapis.com/maps/api/staticmap?center='+country_data[i].longitude+','+country_data[i].latitude+'&zoom=3&size=1200x600&sensor=false&markers=size:mid%7Ccolor:0xff0000';
+					'http://maps.googleapis.com/maps/api/staticmap?center='+country_data[i].longitude+','+country_data[i].latitude+'&zoom=3&size=1200x600&sensor=false&markers=size:mid%7Ccolor:0xff0000&scale=1';
 					console.log( image_map );
 					$('#imageContainer').html("<img src='"+image_map+"'>");
-
+					$('#countryMap').html("<h3 align='center'>Country flag</h3><img src='http://www.geonames.org/flags/x/"+ country_data[i].iso2Code.toLowerCase()+".gif'>");
 				}
 
 			});
