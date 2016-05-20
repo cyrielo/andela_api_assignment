@@ -2,8 +2,71 @@
 <html>
 <head>
 	<title>A web application consuming the CIA api</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, 
+	maximum-scale=1, user-scalable=no">
 </head>
 <body>
-	
+	<div class="container">
+		<div class="row" style="margin-top:30px;" align="center">
+			<div class="col-md-offset-1 col-md-10" id="form-container">
+			<h4>Get country informations from world bank API</h4>
+				<form class="form-inline">
+				  <div class="form-group">
+				    <label for="exampleInputEmail2">Country</label>
+				    <select id="countrySelect" class="form-control">
+				    	<option value="">Select country</option>
+				    </select>
+				  </div>
+				  <button type="button" id="getCountryButton" class="btn btn-default">Get country data</button>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-1 col-md-10" id="searchResults">
+				<div class="table-responsive table-bordered">
+					<table class="table table-striped">
+						<tr>
+							<th>Country Name</th>
+							<th>Income Level</th>
+							<th>Capital city</th>
+							<th>Region</th>
+							<th>ISO-2 Code</th>
+							<th>Lending type</th>
+						</tr>
+						<tr>
+							<td id="country">
+							</td>
+							
+							<td id="income">
+							</td>
+							
+							<td id="capital">
+								
+							</td>
+
+							<td id="region">
+							</td>
+
+							<td id="iso">
+							</td>
+
+							<td id="lending_type">
+								
+							</td>
+
+						</tr>
+					</table>
+				</div>
+				<div align="center" id="imageContainer">
+					
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
+<link rel="stylesheet" href="css/main.css"/>
+<link rel="stylesheet" href="lib/bootstrap-3.3.6-dist/css/bootstrap.min.css"/>
+<script type="text/javascript" src='lib/jquery/jquery-1.12.3.js'></script>
+<script type="text/javascript" src='lib/bootstrap-3.3.6-dist/js/bootstrap.min.js'></script>
+<script type="text/javascript" src='js/app.js'></script>
 </html>

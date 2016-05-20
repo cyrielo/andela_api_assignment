@@ -1,4 +1,15 @@
-*{
-	padding: 0;
-	margin: 0;
+body{
+	background-color: #F7F7F7 !important;
+}
+#form-container{
+	border: 1px solid rgb(200, 200, 200); 
+	padding : 10px !important
+}
+
+#searchResults{
+	margin-top: 30px;
+	border: 1px solid rgb(200, 200, 200); 
+	padding : 10px !important;
+	background: rgb(232, 232, 232);
+	min-height: 200px;
 }
